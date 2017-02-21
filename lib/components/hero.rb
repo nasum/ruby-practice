@@ -9,5 +9,17 @@ module Components
       @life = 100
       @satiety = 100
     end
+
+    def hunger(point)
+      @satiety -= point
+    end
+
+    def injure(point)
+      @life -= point
+    end
+
+    def heal(point)
+      @life += point if @life < 100
+    end
   end
 end
