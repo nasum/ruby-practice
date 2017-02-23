@@ -1,4 +1,5 @@
 require 'components/hero'
+require 'components/events/'
 require 'functions/display'
 require 'functions/scripts'
 
@@ -7,6 +8,7 @@ puts Functions::Scripts.welcome
 print "あなたの名前は何ですか？："
 name = gets
 hero = Components::Hero.new(name: name)
+
 loop do
   Functions::Display.clear_display
   puts "名前　:#{hero.name}"
@@ -30,4 +32,5 @@ loop do
 		break
 	end
 end
+
 puts "see you"
